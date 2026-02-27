@@ -218,38 +218,16 @@
 
 @media (max-width: 640px) {
     .footer-grid {
-        gap: 40px;
-        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
-    .footer-brand {
-        display: flex;
+    .footer-top {
+        padding: 40px 15px 32px;
+    }
+
+    .footer-bottom-content {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-logo {
-        justify-content: center;
-    }
-
-    .footer-socials {
-        justify-content: center;
-    }
-
-    .footer-link {
-        justify-content: center;
-    }
-
-    .footer-contacts li {
-        justify-content: center;
         text-align: center;
-
-        .footer-top {
-            padding: 40px 15px 32px;
-        }
-
-        .footer-bottom-content {
-            flex-direction: column;
-            text-align: center;
-        }
     }
+}
