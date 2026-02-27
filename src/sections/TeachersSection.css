@@ -1,0 +1,142 @@
+.teachers-section {
+    padding: 96px 0;
+    background: var(--bg-2);
+}
+
+.teachers-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.teacher-card {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: var(--bg);
+}
+
+.teacher-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.teacher-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.teacher-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.avatar-ring {
+    display: none;
+}
+
+.teacher-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.teacher-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.teacher-subject {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 1px;
+}
+
+.teacher-degree {
+    font-size: 12px;
+    color: var(--text-3);
+    margin-top: 1px;
+}
+
+.teacher-rating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-top: 2px;
+}
+
+.teacher-rating span {
+    font-size: 12px;
+    color: var(--text-3);
+    margin-left: 4px;
+}
+
+.teacher-bio {
+    font-size: 13px;
+    color: var(--text-2);
+    line-height: 1.65;
+}
+
+.teacher-stats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.t-stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--text-3);
+}
+
+.t-stat svg {
+    color: var(--text-3);
+}
+
+@media (max-width: 1024px) {
+    .teachers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .teachers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teachers-section {
+        padding: 64px 0;
+    }
+
+    .teachers-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

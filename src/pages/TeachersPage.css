@@ -1,0 +1,150 @@
+.teachers-page {
+    padding-top: 64px;
+}
+
+.teachers-list-section {
+    padding: 80px 0;
+    background: var(--bg);
+}
+
+.teachers-full-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.teacher-full-card {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--bg);
+    border-radius: 0;
+    border: none;
+}
+
+.teacher-full-card:hover {
+    background: var(--bg-2);
+    box-shadow: none;
+    border-color: var(--border);
+}
+
+.teacher-full-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.teacher-full-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.teacher-full-card:hover .teacher-full-avatar {
+    transform: none;
+}
+
+.avatar-ring-full {
+    display: none;
+}
+
+.teacher-full-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.teacher-full-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+}
+
+.teacher-full-subject {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.teacher-full-degree {
+    font-size: 12px;
+    color: var(--text-3);
+}
+
+.teacher-full-rating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-top: 2px;
+}
+
+.teacher-full-rating span {
+    font-size: 12px;
+    color: var(--text-3);
+    margin-left: 4px;
+}
+
+.teacher-bio {
+    font-size: 13.5px;
+    color: var(--text-2);
+    line-height: 1.7;
+}
+
+.teacher-stats-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.t-stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-3);
+}
+
+.t-stat svg {
+    color: var(--text-3);
+}
+
+.teacher-achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.achievement-tag {
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    background: var(--bg-2);
+    color: var(--text-2);
+}
+
+@media (max-width: 900px) {
+    .teachers-full-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .teachers-list-section {
+        padding: 56px 0;
+    }
+}

@@ -1,0 +1,345 @@
+.about-page {
+    padding-top: 64px;
+}
+
+/* Shared page hero — used by all pages */
+.page-hero {
+    padding: 80px 0 64px;
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle grid bg */
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.6;
+}
+
+/* Hide old orbs */
+.page-hero-bg,
+.page-orb,
+.page-orb-1,
+.page-orb-2 {
+    display: none;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.page-hero-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+.page-hero-desc {
+    font-size: 16px;
+    color: var(--text-2);
+    line-height: 1.75;
+}
+
+/* ─── Mission ─────────────────────────── */
+.mission-section {
+    padding: 80px 0;
+    background: var(--bg);
+}
+
+.mission-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.mission-title {
+    margin-bottom: 16px;
+}
+
+.mission-text {
+    font-size: 15px;
+    color: var(--text-2);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.mission-checks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mission-checks li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-2);
+    font-weight: 500;
+}
+
+.mission-checks svg {
+    color: var(--green);
+    flex-shrink: 0;
+}
+
+/* Stats panel */
+.mission-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.m-stat {
+    padding: 28px 24px;
+    text-align: center;
+    background: var(--bg-2);
+}
+
+.m-stat-val {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.04em;
+    display: block;
+}
+
+.m-stat-label {
+    font-size: 12px;
+    color: var(--text-3);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 4px;
+}
+
+/* ─── Values ─────────────────────────── */
+.values-section {
+    padding: 80px 0;
+    background: var(--bg-2);
+}
+
+.values-header {
+    margin-bottom: 48px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.value-card {
+    padding: 28px;
+    background: var(--bg);
+    border-radius: 0;
+    border: none;
+    display: flex;
+    gap: 16px;
+}
+
+.value-card:hover {
+    background: var(--bg-2);
+    box-shadow: none;
+    border-color: var(--border);
+}
+
+.value-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.value-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.value-desc {
+    font-size: 13.5px;
+    color: var(--text-2);
+    line-height: 1.65;
+}
+
+/* ─── Timeline ───────────────────────── */
+.timeline-section {
+    padding: 80px 0;
+    background: var(--bg);
+}
+
+.timeline-header {
+    margin-bottom: 48px;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Hide scrollbar for clean look */
+}
+
+.timeline::-webkit-scrollbar {
+    display: none;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12px;
+    height: 1px;
+    background: var(--border);
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 200px;
+    position: relative;
+}
+
+.timeline-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: var(--bg);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.timeline-dot::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.timeline-year {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.timeline-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.timeline-desc {
+    font-size: 13px;
+    color: var(--text-3);
+    line-height: 1.6;
+}
+
+/* ─── Achievements ───────────────────── */
+.achievements-section {
+    padding: 80px 0;
+    background: var(--bg-2);
+}
+
+.achievements-header {
+    margin-bottom: 32px;
+}
+
+.achievements-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 20px;
+    background: var(--bg);
+    font-size: 14px;
+    color: var(--text-2);
+}
+
+.achievement-item svg {
+    color: var(--green);
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .mission-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-hero {
+        padding: 60px 0 48px;
+    }
+
+    .mission-section,
+    .values-section,
+    .timeline-section,
+    .achievements-section {
+        padding: 56px 0;
+    }
+}

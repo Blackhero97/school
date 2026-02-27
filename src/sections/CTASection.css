@@ -1,0 +1,122 @@
+.cta-section {
+    padding: 96px 0;
+    background: var(--accent);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle pattern instead of orbs */
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+/* Hide old orbs */
+.cta-orb {
+    display: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.cta-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+    margin-bottom: 14px;
+}
+
+.cta-desc {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.cta-btn-primary {
+    background: white;
+    color: var(--accent);
+    border-color: white;
+    padding: 13px 28px;
+    font-size: 15px;
+}
+
+.cta-btn-primary:hover {
+    opacity: 0.9;
+    background: white;
+}
+
+.cta-btn-outline {
+    background: transparent;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.4);
+    padding: 13px 28px;
+    font-size: 15px;
+}
+
+.cta-btn-outline:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.cta-address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 13px;
+}
+
+@media (max-width: 640px) {
+    .cta-section {
+        padding: 64px 0;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
