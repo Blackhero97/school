@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
-import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import ProgramsPage from './pages/ProgramsPage'
-import TeachersPage from './pages/TeachersPage'
-import NewsPage from './pages/NewsPage'
-import ContactPage from './pages/ContactPage'
-import Loader from './components/Loader'
-import CustomCursor from './components/CustomCursor'
-import ChatAgent from './components/ChatAgent'
-import './App.css'
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ProgramsPage from "./pages/ProgramsPage";
+import TeachersPage from "./pages/TeachersPage";
+import NewsPage from "./pages/NewsPage";
+import ContactPage from "./pages/ContactPage";
+import Loader from "./components/Loader";
+import CustomCursor from "./components/CustomCursor";
+import ChatAgent from "./components/ChatAgent";
+import "./App.css";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,7 +22,7 @@ function App() {
     // Simulate loading time or wait for assets
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
@@ -53,7 +53,7 @@ function App() {
         )}
       </AnimatePresence>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
