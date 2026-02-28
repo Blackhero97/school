@@ -39,9 +39,9 @@ export default function HeroSection() {
           </motion.h1>
 
           <motion.p className="hero-desc" variants={fadeUp}>
-            BM Maktab — bu zamonaviy bilim berish maskani, bu yerda biz nafaqat
-            o'qitamiz, balki har bir o'quvchining shaxsiy salohiyatini kashf
-            etamiz.
+            <strong>Boborahim Mashrab Maktabi</strong> — bu zamonaviy bilim
+            berish maskani, bu yerda biz nafaqat o'qitamiz, balki har bir
+            o'quvchining shaxsiy salohiyatini kashf etamiz.
           </motion.p>
 
           <motion.div className="hero-actions" variants={fadeUp}>
@@ -101,7 +101,7 @@ export default function HeroSection() {
             >
               <Users size={18} />
               <div>
-                <strong>1200+</strong>
+                <strong>400+</strong>
                 <span>O'quvchilar</span>
               </div>
             </motion.div>
